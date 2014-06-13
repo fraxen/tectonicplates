@@ -1,0 +1,52 @@
+AF   59.160   -73.174   0.9270  DeMets et al. [1994]    PB2002_poles.dat:
+AM   57.645   -83.736   0.9309  Heki et al. [1999]      ID, NLat, ELon, Deg/Ma CCW
+AN   64.315   -83.984   0.8695  DeMets et al. [1994]    (A2,F9.3,F10.3,F9.4)
+AP   33.639   -81.177   0.9160  Lamb [2000]
+AR   59.658   -33.193   1.1616  DeMets et al. [1994]
+AS   74.275   -87.237   0.6497  McClusky et al. [2000]
+AT   56.283     8.932   1.6400  McClusky et al. [2000]
+AU   60.080     1.742   1.0744  DeMets et al. [1994]
+BH   12.559    87.957   0.3029  this paper
+BR   45.900  -111.000   0.2000  this paper
+BS   16.007   122.442   2.1250  Rangin et al. [1999]
+BU    8.894   -75.511   2.6670  Circum-Pacific Map Project, 1986
+CA   54.313   -79.431   0.9040  Weber et al. [2001]
+CL   10.130   -45.570   0.3090  Seno et al. [1993]
+CO   36.823  -108.629   1.9975  DeMets et al. [1994]
+CR  -12.628   175.127   3.6050  this paper
+EA   28.300    66.400  11.4000  Engeln and Stein [1984]
+EU   61.066   -85.819   0.8591  DeMets et al. [1994]
+FT  -10.158  -178.305   4.8480  this paper
+GP    9.399    79.690   5.2750  Lonsdale, 1988
+IN   60.494   -30.403   1.1034  DeMets et al. [1994]
+JF   35.000    26.000   0.5068  Wilson [1988]
+JZ   35.910    70.166  22.5200  Anderson-Fontana et al. [1986]
+KE   47.521    -3.115   2.8310  this paper
+MA   43.777   149.205   1.2780  this paper
+MN   -3.037   150.456  51.3000  Martinez and Taylor [1996]
+MO   59.589    78.880   0.8927  this paper
+MS   11.103   -56.746   4.0700  Rangin et al. [1999]
+NA   48.709   -78.167   0.7486  DeMets et al. [1994]
+NB   -4.000   139.000   0.3300  Tregoning et al. [1998]
+ND   58.664   -89.003   0.7009  Trenkamp et al. [1996]
+NH   13.000   -12.000   2.7000  this paper
+NI    6.868  -168.868   3.2550  Zellmer and Taylor [2001]
+NZ   55.578   -90.096   1.3599  DeMets et al. [1994]
+OK   55.421   -82.859   0.8450  Cook et al. [1986]
+ON   48.351   142.415   2.8530  this paper
+PA    0.000     0.000   0.0000  (abritrary choice of reference frame)
+PM   54.058   -90.247   0.9069  Kellogg and Vega [1995]
+PS   -1.200   -45.800   1.0000  Seno et al. [1993]; Kato et al. [1998]
+RI   26.700  -105.200   4.6923  DeMets and Traylen [2000]
+SA   54.999   -85.752   0.6365  DeMets et al. [1994]
+SB   10.610   -32.990   8.4400  Tregoning et al. [1999]
+SC   48.625   -81.454   0.6516  Pelayo and Wiens [1989]
+SL   63.121   -97.084   0.8558  (hypothetical; see text)
+SO   58.789   -81.637   0.9783  Chu and Gordon [1999]
+SS   19.529   135.017   1.4780  this paper
+SU   55.442   -72.955   1.1030  Rangin et al. [1999]
+SW  -19.019   -39.640   1.8400  Pelayo and Wiens [1989]
+TI   19.524   112.175   1.5140  this paper
+TO   28.807     2.263   9.3000  Zellmer and Taylor [2001]
+WL   22.134   132.330   1.5460  Tregoning et al. [1998]
+YA   69.067   -97.718   0.9983  Heki et al. [1999]

@@ -1,0 +1,131 @@
+        Electronic Data Submission for Paper 2001GC000252
+          An updated digital model of plate boundaries
+                           Peter Bird
+             Department of Earth and Space Sciences
+                    University of California
+                   Los Angeles, CA 90095-1567
+        Geochemistry Geophysics Geosystems, 4(3), 1027,
+                  doi:10.1029/2001GC000252, 2003
+
+Introduction
+
+     Plate boundary curves and the curves which outline orogens
+are approximated by sequences of discrete points.  The intention
+is that adjacent points should be connected by short arcs of
+great circles.  However, since no arc between adjacent points is
+longer than 111 km, it will not cause significant additional
+error if maps derived from this data set show the points as
+connected by straight lines, regardless of the map projection.
+     Each point is given as a (longitude, latitude) pair, with
+coordinates in units of decimal degrees.  Latitude is positive in
+the northern hemisphere and negative in the southern hemisphere.
+Longitude is generally positive to the east of the Greenwich
+meridian, and negative to the west, but some points in the
+western hemisphere are represented with positive longitudes in
+the range 180 to 360.  All coordinates are given with 6
+significant digits, so that round-off error in positions does not
+exceed 60 m; however, accuracy never equals precision.
+     In most of the digital files presenting model PB2002,
+sequences of points are grouped into "segments", whose ends are
+indicated by a marker record, "*** end of line segment ***".
+Preceding the list of sequential points is a title record for the
+segment; in these records, the essential information is contained
+in the first 2-8 bytes, and notations following byte 27 (if any)
+are to give attribution to the source of the information or
+opinion.
+
+1. PB2002_boundaries.dig contains the plate boundary curves in
+the most compact form, and should be used to add plate boundaries
+to maps.  It contains 6,048 points grouped into 229 segments.
+The title record for each segment has 5 bytes, in which the first
+two bytes give the identifier of the plate on the left (as one
+travels along the segment, looking down from outside the Earth)
+and bytes 4-5 give the identifier of the plate on the right.  In
+byte 3, the symbol "/" indicates that the right-hand plate
+subducts under the left-hand plate, while symbol "\" indicates
+the opposite polarity of subduction.  All non-subducting plate
+boundary segments have a hyphen "-" in byte 3.  The number of
+segments exceeds the number of plate boundaries for several
+reasons: (i) because a single plate boundary may include both
+subduction and non-subduction segments, which require different
+titles; (ii) because different parts of a single plate boundary
+may be credited to different sources; (iii) for convenience in
+digitizing long plate boundaries which did not fit onto a single
+map.
+
+2. PB2002_plates.dig.  For some applications it is necessary to
+represent plates by closed outlines.  They include computing the
+areas of plates, determining which plate a given point lies
+within, and mapping plates as regions of contrasting color.  For
+such applications, file PB2002_plates.dig is provided.  It
+contains 52 segments, each titled with the two-letter identifier
+of a plate.  Each segment is a closed curve outlining that plate
+in the counterclockwise direction (as seen from outside the
+Earth).  The last point in the segment is identical to the first
+point.  Because each plate boundary necessarily appears twice in
+this file, it is about twice as large as the first.
+
+3. PB2002_orogens.dig contains 13 segments which give the
+outlines of the orogens.  Each outline is digitized in the
+counterclockwise direction, as seen from outside the Earth.  The
+format is the same as in the file above, except that orogens are
+given spelled-out names (e.g., "Alps", "Persia-Tibet-Burma") to
+help prevent confusion between orogens and plates.  See the
+initial sections of the associated paper for definitions of plate
+and orogen, and also for clarication of the overlay relationship
+between the set of orogens and the set of plates.
+
+4. PB2002_steps.dat.  For studies of seismicity and geochemical
+cycles it is useful to know how much plate boundary is of
+spreading, transform, or subduction class, and how fast these
+boundaries slip.  But a single class cannot always be specified
+for an entire plate boundary curve, or even for an entire plate
+boundary segment, because the class may change repeatedly with
+local changes in the azimuth of the boundary.  A similar problem
+arises with computed relative velocities, which change smoothly
+in both magnitude and azimuth along every boundary.  Therefore,
+file PB2002_steps.dat presents detailed information for each
+"digitization step".  (A digitization step is the short great-
+circle arc between adjacent digitized plate boundary points.)
+There are 5,819 steps in model PB2002, with mean length of 44.7
+km and length range from 1 km to 109 km.  Table 2 of the
+associated paper details the information which is computed at the
+midpoint of every step.
+     The 7 classes of plate boundary step contained in this file
+are defined as follows.  Subduction zones (SUB) are plate
+boundary steps with a convergent (component of) velocity and a
+Benioff zone of intermediate to deep earthquakes and/or a
+parallel volcanic arc with Quaternary activity.  (These criteria
+exclude the Alps, Zagros, Pamirs, Himalaya, Tien Shan, and
+Taiwan.)  The designation of Benioff zones and/or volcanic arcs
+with the title symbols "/" or "\" was manual, with the intention
+that small gaps in a Benioff zone or volcanic arc should not
+cause unrealistic high-frequency changes in the interpreted step
+character.  Because so many subduction zones lie along
+continental margins, or contain thickened arc crust which may be
+considered to have some "continental" character, subduction zones
+are not divided into continental and oceanic types.
+     Other plate boundaries are classified into one of 6 types
+according to whether they are oceanic or continental, and whether
+their relative velocity is divergent, strike-slip, or convergent.
+Oceanic plate boundary steps are those lying entirely: (i) within
+sea floor whose age is known from linear magnetic anomalies to be
+less than 180 Ma [Mueller et al., 1997]; and/or (ii) at water
+depths exceeding 2000 m [ETOPO5, Anonymous, 1988].  Continental
+plate boundary steps are any that are not oceanic.  (Thus,
+transitional steps are considered continental.)  Boundary steps
+are considered strike-slip if the computed relative velocity
+(based on the Euler poles of Table 1) has an azimuth within 20
+degrees of the azimuth of the plate boundary step.  (This
+tolerance is intended to allow for random local errors in plate
+boundary azimuth, as well as systematic errors in model velocity
+azimuth caused by errors in Euler pole positions.)  Combining
+these two tests yields the 6 non-subduction types: oceanic
+spreading ridge (OSR), oceanic transform fault (OTF), oceanic
+convergent boundary (OCB), continental rift boundary (CRB),
+continental transform fault (CTF), and continental convergent
+boundary (CCB).
+
+References cited may be found in the bibliography of the
+associated paper.
+
