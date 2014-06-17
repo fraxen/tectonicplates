@@ -1,22 +1,26 @@
 import sys,os
-import arcpy
+import subprocess
 
-arcpy.env.workspace = r'C:\data\library\world_geo\peterbird\converted'
-arcpy.env.overwriteOutput = True
-
+if os.getcwd().find('process') > 0:
+	outDir = os.path.abspath(os.path.join(os.getcwd(),'..'))
+else:
+	outDir = os.getcwd()
 
 pbData = [\
 	{'file':'PB2002_boundaries','geom':'line','type':'plate boundary'},\
 	{'file':'PB2002_orogens','geom':'poly','type':'orogen'},\
 	{'file':'PB2002_plates','geom':'poly','type':'plate'},\
+	# {'file':'PB2002_poles','geom':'point','type':'poles'},\
+	# {'file':'PB2002_steps','geom':'point','type':'steps'},\
 	]
 
 
 for dataset in pbData:
+	# Prepare each data file for conversion in Global Mapper
 	outData = os.path.join(os.environ['TEMP'],dataset['file'] + '2.txt')
 	outBuffer = ''
 
-	with open(dataset['file'] + '.dig.txt') as fp:
+	with open(os.path.join('original',dataset['file'] + '.dig.txt')) as fp:
 		for line in fp:
 			if line == '*** end of line segment ***\n':
 				continue
@@ -31,8 +35,23 @@ for dataset in pbData:
 				outBuffer = outBuffer + 'Name,' + line.strip() + '\n'
 	with open(outData,'w') as fp:
 		fp.write(outBuffer)
-	print outData
 
+# Next we process all the data files in GM
+gmScript = os.path.join(os.environ['TEMP'],"dataprocess.gms")
+with open(gmScript,'w') as fp:
+	fp.write('GLOBAL_MAPPER_SCRIPT VERSION=1.00')
+	for dataset in pbData:
+		if dataset['geom'] == 'line': gmShpType = 'LINES'
+		if dataset['geom'] == 'poly': gmShpType = 'AREAS'
+		if dataset['geom'] == 'point': gmShpType = 'POINTS'
+		fp.write('UNLOAD_ALL\n')
+		fp.write('IMPORT_ASCII FILENAME="%s" TYPE="POINT_AND_LINE" COORD_DELIM=AUTO COORD_ORDER=X_FIRST PROJ_EPSG_CODE=4326 LABEL_FIELD=Name\n' \
+			% os.path.join(os.environ['TEMP'],dataset['file'] + '2.txt') )
+		fp.write('EXPORT_VECTOR FILENAME="%s" TYPE="SHAPEFILE" SHAPE_TYPE="%s" GEN_PRJ_FILE=YES OVERWRITE_EXISTING=YES GEN_MULTI_PATCH=YES\n' \
+			% (os.path.join(outDir,dataset['file'] + '.shp'), 'LINES') )
+
+# Execute GM
+subprocess.call(['cmd.exe','/c','start','global_mapper11.exe', gmScript])
 sys.exit()
 
 
