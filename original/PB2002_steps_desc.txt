@@ -1,0 +1,24 @@
+(This list was provided as "supporting information" with the published paper)
+
+Table 2. Data for Each Plate Boundary Step in File PB2002_steps.dat
+
+Bytes	Contain (all fields are right-justified)
+
+1-4	Sequence number (for tying to seismic catalogs).
+6	Continuity?  ":" appears if this step connects to previous step, in same segment.
+7-11	Plate-boundary identifier (from PB2002_boundaries.dig; example: "AF-AN").
+13-20	Longitude of initial point, degrees East, with precision 0.001°.
+22-28	Latitude of initial point, degrees North, with precision 0.001°.
+30-37	Longitude of final point, degrees East, with precision 0.001°.
+39-45	Latitude of final point, degrees North, with precision 0.001°.
+47-51	Length of step, km, with precision 0.1 km
+53-55	Azimuth of step at center point, degrees clockwise from North, with precision 1°.
+57-61	Velocity of left plate with respect to right plate, mm/a, precision 0.1 mm/a.
+63-65	Azimuth of velocity (above), degrees clockwise from North, precision 1°.
+67-72	Divergent component of relative velocity (convergence negative), pr. 0.1 mm/a.
+74-79	Right-lateral component of relative velocity, mm/a, precision 0.1 mm/a.
+81-86	Elevation (bathymetry negative), from ETOPO5, m, precision 1 m.
+88-90	Age of seafloor, from Mueller et al. [1997], Ma, precision 1 Ma.  >180 = unknown.
+92	Continuity? ":" appears if step class = class of previous step and ":" is in byte 6.
+93-95	Step class: CCB, CTF, CRB, OSR, OTF, OCB, or SUB (see text).
+96	Orogen?  "*" appears if midpoint of step lies in any orogen.
