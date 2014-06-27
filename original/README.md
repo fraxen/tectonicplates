@@ -1,13 +1,9 @@
-        Electronic Data Submission for Paper 2001GC000252
-          An updated digital model of plate boundaries
-                           Peter Bird
-             Department of Earth and Space Sciences
-                    University of California
-                   Los Angeles, CA 90095-1567
-        Geochemistry Geophysics Geosystems, 4(3), 1027,
-                  doi:10.1029/2001GC000252, 2003
+# Electronic Data Submission for Paper 2001GC000252
+## An updated digital model of plate boundaries
+_Peter Bird, Department of Earth and Space Sciences, University of California, Los Angeles, CA 90095-1567_  
+_Geochemistry Geophysics Geosystems, 4(3), 1027, [doi:10.1029/2001GC000252](http://scholar.google.se/scholar?cluster=1268723667321132798), 2003_
 
-Introduction
+##Introduction
 
      Plate boundary curves and the curves which outline orogens
 are approximated by sequences of discrete points.  The intention
