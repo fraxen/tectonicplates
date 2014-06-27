@@ -1,6 +1,4 @@
-(This list was provided as "supporting information" with the published paper)
-
-Table 2. Data for Each Plate Boundary Step in File PB2002_steps.dat
+(This list was provided as "supporting information" with the published pape 2. Data for Each Plate Boundary Step in File PB2002_steps.dat
 
 Bytes	Contain (all fields are right-justified)
 
