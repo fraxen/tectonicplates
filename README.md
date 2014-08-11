@@ -12,7 +12,7 @@ To get access to the full database, [download the zip-archive of all the data (s
 
 Source data
 -----
-The data was downloaded from [http://peterbird.name/oldFTP/PB2002/](http://peterbird.name/oldFTP/PB2002/) in June 2014. A copy of the original data is available in the [original](_original_) folder of this repo, with some very minor updates.
+The data was downloaded from [http://peterbird.name/oldFTP/PB2002/](http://peterbird.name/oldFTP/PB2002/) in June 2014. A copy of the original data is available in the _[original](original)_ folder of this repo, with some very minor updates.
 
 License
 ----
