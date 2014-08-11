@@ -2,7 +2,7 @@ World tectonic plates and boundaries
 ======================
 <p align="center"><img src="example_plates.png" title="Example map using tectonic plates dataset" alt="Example map using tectonic plates dataset" /></p>
 This is a conversion of the dataset originally published in the paper _An updated digital model of plate boundaries_ by Peter Bird (Geochemistry Geophysics Geosystems, 4(3), 1027, [doi:10.1029/2001GC000252](http://scholar.google.se/scholar?cluster=1268723667321132798), 2003).
-To bring this dataset into the mordern age, the original data has been parsed, cleaned and verified using ArcGIS 10.2 and converted to shape files.
+To bring this dataset into the modern age, the original data has been parsed, cleaned and verified using ArcGIS 10.2 and converted to shape files.
 The dataset presents tectonic plates and their boundaries, and in addition orogens and information about the boundaries.
 The data is useful for geological applications, analysis and education, and should be easy to use in any modern GIS software application.
 
