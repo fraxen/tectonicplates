@@ -22,7 +22,7 @@ Please consider giving Hugo Ahlenius, Nordpil and Peter Bird credit and recognit
 Process
 -----
 All the original data were retrieved from http://peterbird.name/oldFTP/PB2002/ in June 2014 and parsed using Python and Global Mapper 11. Further data manipulation was performed in ArcGIS 10.2.
-The main edits regarded segments spanning the -180/180 boundarie, which had to be manually split and moved.
+The main edits regarded segments spanning the -180/180 boundary, which had to be manually split and moved.
 
 Finishing words
 ------
