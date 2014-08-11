@@ -5,6 +5,7 @@ This is a conversion of the dataset originally published in the paper _An update
 To bring this dataset into the modern age, the original data has been parsed, cleaned and verified using ArcGIS 10.2 and converted to shape files.
 The dataset presents tectonic plates and their boundaries, and in addition orogens and information about the boundaries.
 The data is useful for geological applications, analysis and education, and should be easy to use in any modern GIS software application.
+For information on the fields and values, please refer to the [original](original) documentation and the scientific article.
 
 Download
 -----
