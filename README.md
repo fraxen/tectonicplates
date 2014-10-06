@@ -7,6 +7,8 @@ The dataset presents tectonic plates and their boundaries, and in addition oroge
 The data is useful for geological applications, analysis and education, and should be easy to use in any modern GIS software application.
 For information on the fields and values, please refer to the [original](original) documentation and the scientific article.
 
+Now with [GeoJSON](GeoJSON) data, courtesy of [csterling](https://github.com/csterling) - Thanks! (note that this data can be previewed directly in the github webinterface)
+
 Download
 -----
 To get access to the full database, [download the zip-archive of all the data (some 5 MB)](https://github.com/fraxen/tectonicplates/archive/master.zip), or clone this repo using your favorite git tool.
@@ -29,4 +31,5 @@ Finishing words
 ------
 This work was performed by Hugo Ahlenius, and I am consultant specializing in GIS and cartography, you can read more about me and my services at [http://nordpil.com](http://nordpil.com).
 I wish to extend a warm *thanks!* to Peter Brid team for creating such a wonderful resource!
+Also thanks to [csterling](https://github.com/csterling) for preparing GeoJSON format data.
 Please note anything that can be improved in the data, feel free to contribute, and just let me know if there is anything unclear.
